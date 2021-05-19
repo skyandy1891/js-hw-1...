@@ -85,3 +85,35 @@ function splitMessage(message, delimeter) {
 }
 
 // ========== 11 ==========
+
+function calculateEngravingPrice(message, pricePerWord) {
+  return message.split(' ').length * pricePerWord;
+}
+
+// ========== 12 ==========
+
+function makeStringFromArray(array, delimeter) {
+  return (string = array.join(delimeter));
+}
+
+// ========== 13 ==========
+// ==========посмотреть пример в первом видео второго модуля!!!==========
+
+function slugify(title) {
+  const slug = title.toLowerCase().split(' ').join('-');
+  return slug;
+}
+// ========== 14 ==========
+
+const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+const firstTwoEls = fruits.slice(0, 2);
+const nonExtremeEls = fruits.slice(1, 4);
+const lastThreeEls = fruits.slice(-3);
+
+// ========== 15 ==========
+
+const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+const newClients = ['Peach', 'Houston'];
+const allClients = oldClients.concat(newClients);
+
+// ========== 16 ==========
