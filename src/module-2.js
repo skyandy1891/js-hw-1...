@@ -79,5 +79,9 @@ function splitMessage(message, delimeter) {
 
   return words;
 }
+// ===========optimised task 10===========
+function splitMessage(message, delimeter) {
+  return message.split(delimeter);
+}
 
 // ========== 11 ==========
