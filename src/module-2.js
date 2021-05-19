@@ -60,4 +60,14 @@ const fruits = ['apple', 'peach', 'pear', 'banana'];
 const lastElementIndex = fruits.length - 1;
 const lastElement = fruits[lastElementIndex];
 
-// ========== 9 ==========
+// ========== 9 ==========решение не моё,нужно разбираться
+
+function getExtremeElements(array) {
+  const firstElement = array[0];
+  const lastElementIndex = array.length - 1;
+  const lastElement = array[lastElementIndex];
+  const newArray = [firstElement, lastElement];
+  return newArray;
+}
+
+// ========== 10 ==========

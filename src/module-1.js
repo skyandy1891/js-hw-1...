@@ -259,3 +259,4 @@ function checkForSpam(message) {
   result = message.includes('spam') || message.includes('sale');
   return result;
 }
+// ===============================DONE !!!===========================================
