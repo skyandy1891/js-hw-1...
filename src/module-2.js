@@ -71,3 +71,13 @@ function getExtremeElements(array) {
 }
 
 // ========== 10 ==========
+
+function splitMessage(message, delimeter) {
+  let words;
+
+  words = message.split(delimeter);
+
+  return words;
+}
+
+// ========== 11 ==========
