@@ -117,3 +117,54 @@ const newClients = ['Peach', 'Houston'];
 const allClients = oldClients.concat(newClients);
 
 // ========== 16 ==========
+
+// НЕ ПОНЯЛ
+function makeArray(firstArray, secondArray, maxLength) {
+  // Change code below this line
+  let arr = firstArray.concat(secondArray);
+  if (arr.length > maxLength) {
+    arr.length = maxLength;
+    return arr;
+  }
+  return arr.slice(0);
+}
+
+// ========== 17 ==========
+
+const start = 3;
+const end = 7;
+
+for (let i = start; i <= end; i += 1) {
+  console.log(i);
+}
+
+// ========== 18 ==========
+
+function calculateTotal(number) {
+  // Change code below this line
+  let sum = 0;
+  for (let i = 1; i <= number; i += 1) {
+    sum += i;
+  }
+  return sum;
+}
+
+// ========== 19 ==========
+
+const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+for (let i = 0; i < fruits.length; i += 1) {
+  const fruit = fruits[i];
+  console.log(fruit);
+}
+
+// ========== 20 ==========
+
+//Задача: подсчёт суммы покупки(функция , которая принимает массив чисел)
+function calculateTotalPrice(order) {
+  let total = 0;
+  for (let value of order) {
+    total += value;
+  }
+  return total;
+}
