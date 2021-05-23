@@ -149,7 +149,7 @@ function calculateTotal(number) {
   return sum;
 }
 
-// ========== 19 ==========
+// ========== 19 ==========!!!
 
 const fruits = ['apple', 'plum', 'pear', 'orange'];
 
@@ -158,7 +158,7 @@ for (let i = 0; i < fruits.length; i += 1) {
   console.log(fruit);
 }
 
-// ========== 20 ==========
+// ========== 20 ==========!!!
 
 //Задача: подсчёт суммы покупки(функция , которая принимает массив чисел)
 function calculateTotalPrice(order) {
@@ -168,3 +168,144 @@ function calculateTotalPrice(order) {
   }
   return total;
 }
+
+// ========== 21 ==========
+// НЕ ПОНЯЛ, РАЗОБРАТЬСЯ!!!!!
+function findLongestWord(string) {
+  const str = string.split(' ');
+  let longest = 0;
+  let word = null;
+  for (let i = 0; i < str.length - 1; i++) {
+    if (longest < str[i].length) {
+      longest = str[i].length;
+      word = str[i];
+    }
+  }
+  return word;
+}
+
+// ========== 22 ==========!!!
+
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  for (let i = min; i <= max; i += 1) {
+    numbers.push(i);
+  }
+  return numbers;
+}
+
+// ========== 23 ==========!!!!!
+
+function filterArray(numbers, value) {
+  const result = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > value) {
+      result.push(numbers[i]);
+    }
+  }
+  return result;
+}
+
+// ========== 24 ==========!!!!!
+
+function checkFruit(fruit) {
+  const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+  return fruits.includes(fruit);
+}
+
+// ========== 25 ==========!!!
+
+function getCommonElements(array1, array2) {
+  const newArr = [];
+  for (const element of array1) {
+    if (array2.includes(element)) {
+      newArr.push(element);
+    }
+  }
+  return newArr;
+}
+
+// ========== 26 ==========!!!
+
+function calculateTotalPrice(order) {
+  let total = 0;
+
+  for (const item of order) {
+    total += item;
+  }
+  return total;
+}
+
+// ========== 27 ==========!!!
+
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+
+  for (const number of numbers) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  }
+  return filteredNumbers;
+}
+
+// ========== 28 ==========
+
+const a = 3 % 3;
+const b = 4 % 3;
+const c = 11 % 8;
+const d = 12 % 7;
+const e = 8 % 6;
+
+// ========== 29 ==========!!!
+
+function getEvenNumbers(start, end) {
+  let evenNumbers = [];
+  for (let i = start; i <= end; i += 1) {
+    const number = [i];
+    if (i % 2 === 0) {
+      evenNumbers.push(i);
+    }
+  }
+  return evenNumbers;
+}
+
+// ========== 30 ==========
+
+const start = 6;
+const end = 27;
+let number;
+
+for (let i = start; i < end; i += 1) {
+  if (i % 5 === 0) {
+    number = i;
+    break;
+  }
+}
+
+// ========== 31 ==========
+
+function findNumber(start, end, divisor) {
+  let number;
+
+  for (let i = start; i < end; i += 1) {
+    if (i % divisor === 0) {
+      number = i;
+      return i;
+    }
+  }
+}
+
+// ========== 32 ==========!!!!!!!!!!!!!!!
+
+function includes(array, value) {
+  for (const arr of array) {
+    if (arr === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// ===================================DONE===================================
