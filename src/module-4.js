@@ -39,7 +39,7 @@ makePizza('Ультрасыр', function eatPizza(pizzaName) {
   console.log(`Едим пиццу ${pizzaName}.`);
 });
 
-// ================================ 4 ================================
+// ================================ 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 const pizzaPalace = {
   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
@@ -68,21 +68,95 @@ pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
 pizzaPalace.order('Биг майк', makePizza, onOrderError);
 pizzaPalace.order('Венская', makePizza, onOrderError);
 
-// ================================ 5 ================================
+// ================================ 5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+const pizzaPalace = {
+  pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+
+  checkPizza(pizzaName) {
+    return this.pizzas.includes(pizzaName);
+  },
+  order(pizzaName) {
+    const isPizzaAvailable = this.checkPizza(pizzaName);
+
+    if (!isPizzaAvailable) {
+      return `В ассортименте нет пиццы с названием «${pizzaName}».`;
+    }
+
+    return `Заказ принят, готовим пиццу «${pizzaName}».`;
+  },
+  
 // ================================ 6 ================================
 
-// ================================ 7 ================================
+  const customer = {
+  username: 'Mango',
+  balance: 24000,
+  discount: 0.1,
+  orders: ['Burger', 'Pizza', 'Salad'],
+  // Пиши код ниже этой строки
+  getBalance() {
+    return this.balance;
+  },
+  getDiscount() {
+    return this.discount;
+  },
+  setDiscount(value) {
+    this.discount = value;
+  },
+  getOrders() {
+    return this.orders;
+  },
+  addOrder(cost, order) {
+   this.balance -= cost - cost * this.discount;
+    this.orders.push(order);
+  },
+  // Пиши код выше этой строки
+};
 
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, 'Steak');
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ['Burger', 'Pizza', 'Salad', 'Steak']
+
+// ================================ 7 !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+const orders = [
+  { email: 'solomon@topmail.ua', dish: 'Burger' },
+  { email: 'artemis@coldmail.net', dish: 'Pizza' },
+  { email: 'jacob@mail.com', dish: 'Taco' },
+];
+
+// Пиши код ниже этой строки
 function composeMessage(position) {
-  return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+ return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
 }
+
+
 const messages = [];
 for (let i = 0; i < orders.length; i += 1) {
   messages.push(composeMessage.call(orders[i], i + 1));
 }
-// ================================ 8 ================================
 
-// ================================ 9 ================================
+// ================================ 8 !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// ================================ 10 ================================
+const orders = [
+  { email: "solomon@topmail.ua", dish: "Burger" },
+  { email: "artemis@coldmail.net", dish: "Pizza" },
+  { email: "jacob@mail.com", dish: "Taco" },
+];
+
+// Пиши код ниже этой строки
+function composeMessage(position) {
+  return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+}
+
+const messages = [];
+for (let i = 0; i < orders.length; i += 1) {
+  const msg = composeMessage.apply(orders[i],[i + 1]);
+  messages.push(msg);
+}
+
+// ================================ 9 !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// ================================ 10 !!!!!!!!!!!!!!!!!!!!!!!!!!!!
