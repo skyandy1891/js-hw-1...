@@ -181,3 +181,162 @@ class Storage {
 }
 
 // ==================== 13 ====================!!!!!
+
+class StringBuilder {
+  #value;
+  constructor(baseValue) {
+    this.#value = baseValue;
+  }
+  getValue() {
+    return this.#value;
+  }
+  padEnd(str) {
+    this.#value += str;
+  }
+  padStart(str) {
+    this.#value = str + this.#value;
+  }
+  padBoth(str) {
+    this.padStart(str);
+    this.padEnd(str);
+  }
+}
+
+// ==================== 14 ====================
+
+class Car {
+  #model;
+  #price;
+  #brand;
+
+  constructor({ brand, model, price }) {
+    this.#brand = brand;
+    this.#model = model;
+    this.#price = price;
+  }
+
+  get brand() {
+    return this.#brand;
+  }
+
+  set brand(newBrand) {
+    this.#brand = newBrand;
+  }
+
+  get model() {
+    return this.#model;
+  }
+
+  set model(newModel) {
+    this.#model = newModel;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  set price(newPrice) {
+    this.#price = newPrice;
+  }
+}
+
+// ==================== 15 ====================!&!&!
+
+class Car {
+  // Пиши код ниже этой строки
+  static MAX_PRICE = 50000;
+  #price;
+
+  constructor({ price }) {
+    this.#price = price;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  set price(newPrice) {
+    if (newPrice <= Car.MAX_PRICE) {
+      this.#price = newPrice;
+    }
+    return this.#price;
+  }
+  // Пиши код выше этой строки
+}
+
+// ==================== 16 ====================более-менее понятно
+
+class Car {
+  static #MAX_PRICE = 50000;
+  // Пиши код ниже этой строки
+
+  static checkPrice(price) {
+    if (price > Car.#MAX_PRICE) {
+      return 'Внимание! Цена превышает допустимую.';
+    }
+    return 'Всё хорошо, цена в порядке.';
+  }
+
+  // Пиши код выше этой строки
+  constructor({ price }) {
+    this.price = price;
+  }
+}
+
+// ==================== 17 ====================
+
+class User {
+  email;
+
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+// Пиши код ниже этой строки
+class Admin extends User {
+  static AccessLevel = { BASIC: 'basic', SUPERUSER: 'superuser' };
+}
+
+// ==================== 18 ====================!&!&!
+
+class User {
+  email;
+
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+
+class Admin extends User {
+  // Пиши код ниже этой строки
+  accessLevel;
+  constructor({ email, accessLevel }) {
+    super(email);
+    this.accessLevel = accessLevel;
+  }
+
+  static AccessLevel = {
+    BASIC: 'basic',
+    SUPERUSER: 'superuser',
+  };
+
+  // Пиши код выше этой строки
+}
+
+// ==================== 19 ====================
