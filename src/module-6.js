@@ -11,5 +11,7 @@ function calculateTotalPrice(orderedItems) {
   // Пиши код выше этой строки
   return totalPrice;
 }
+// или же второй вариант!!!
+orderedItems.forEach(element => (totalPrice += element));
 
 // ================= 2 ================
