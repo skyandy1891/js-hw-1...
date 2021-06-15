@@ -1,3 +1,117 @@
+// ============ 1 ==========
+
+// ============ 2 ==========
+
+// ============ 3 ==========
+
+// ============ 4 ==========
+
+// ============ 5 ==========
+
+const productName = 'Droid';
+const pricePerItem = 3500;
+const message = `You picked ${'Droid'}, price per item is ${3500} credits`;
+
+// ============ 6 ==========
+
+const pricePerDroid = 800;
+const orderedQuantity = 6;
+const deliveryFee = 50;
+const totalPrice = pricePerDroid * orderedQuantity + deliveryFee;
+const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
+
+// ============ 7 ==========
+
+// Change code below this line
+function sayHi() {
+  console.log('Hello, this is my first function!');
+}
+sayHi();
+
+// ============ 8 ==========
+
+// Change code below this line
+function add(a, b, c) {
+  console.log(`Addition result equals ${a + b + c}`);
+  // Change code above this line
+}
+add(15, 27, 10);
+add(10, 20, 30);
+add(5, 10, 15);
+// ============ 9 ==========
+
+function add(a, b, c) {
+  // Change code below this line
+  return a + b + c;
+  // Change code above this line
+}
+add(2, 5, 8); // 15
+console.log(add(15, 27, 10));
+console.log(add(10, 20, 30));
+console.log(add(5, 10, 15));
+
+// ============ 10 ==========
+
+function makeMessage(name, price) {
+  // Change code below this line
+  const message = `You picked ${name}, price per item is ${price} credits`;
+  // Change code above this line
+  return message;
+}
+
+// ============ 11 ==========
+
+function calculateTotalPrice(orderedQuantity, pricePerItem) {
+  // Change code below this line
+  const totalPrice = orderedQuantity * pricePerItem;
+
+  // Change code above this line
+  return totalPrice;
+}
+
+// ============ 12 ==========
+
+function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+  // Change code below this line
+  const totalPrice = orderedQuantity * pricePerDroid + deliveryFee;
+
+  const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
+  // Change code above this line
+  return message;
+}
+// ============ 13 ==========
+
+function isAdult(age) {
+  // Change code below this line
+  const passed = age >= 18;
+
+  // Change code above this line
+  return passed;
+}
+
+// ============ 14 ==========
+
+function isValidPassword(password) {
+  const SAVED_PASSWORD = 'jqueryismyjam';
+  // Change code below this line
+  const isMatch = password === 'jqueryismyjam';
+  // Change code above this line
+  return isMatch;
+}
+
+// ============ 15 ==========
+
+function checkAge(age) {
+  let message;
+  if (age >= 18) {
+    // Change this line
+    message = 'You are an adult';
+  } else {
+    message = 'You are a minor';
+  }
+  return message;
+}
+
 // ============ 16 ==========
 function checkStorage(available, ordered) {
   let message;
@@ -8,7 +122,7 @@ function checkStorage(available, ordered) {
   }
   return message;
 }
-// ============ 17 ==========
+// ============ 17 ========== вообще не понял!!!!!!!!!!!!!!!
 
 let a = 5;
 let b = 10;
