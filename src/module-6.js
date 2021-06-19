@@ -49,10 +49,17 @@ const calculateTotalPrice = (quantity, pricePerItem) => {
   return quantity * pricePerItem;
 };
 
-// ================= 5 ================ доделать!!!!!
+// ================= 5 ================
 
 // Пиши код ниже этой строки
-function calculateTotalPrice(orderedItems) {
+const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+
+// Пиши код выше этой строки
+
+// ================= 6 ================
+
+// Пиши код ниже этой строки
+const calculateTotalPrice = orderedItems => {
   let totalPrice = 0;
 
   orderedItems.forEach(item => {
@@ -60,5 +67,132 @@ function calculateTotalPrice(orderedItems) {
   });
 
   return totalPrice;
+};
+
+// ================= 7 ================
+
+// Пиши код ниже этой строки
+const filterArray = (numbers, value) => {
+  const filteredNumbers = [];
+  numbers.forEach(number => {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+  // Пиши код выше этой строки
+  return filteredNumbers;
+};
+
+// ================= 8 ================
+
+// Пиши код ниже этой строки
+const getCommonElements = (firstArray, secondArray) => {
+  const commonElements = [];
+
+  firstArray.forEach(element => {
+    if (secondArray.includes(element)) {
+      commonElements.push(element);
+    }
+  });
+
+  // Пиши код выше этой строки
+  return commonElements;
+};
+
+// ================= 9 ================!!!!!!!
+// function changeEven(numbers, value) {
+//   numbers.forEach((number, i) => {
+//     if (numbers[i] % 2 === 0) {
+//       numbers[i] = numbers[i] + value;
+//     }
+//   });
+//   return numbers;
+// }
+function changeEven(numbers, value) {
+  // Пиши код ниже этой строки
+  const newArray = [];
+  numbers.forEach(number => {
+    if (number % 2 === 0) {
+      number = number + value;
+      newArray.push(number);
+    } else if (number % 2 !== 0) {
+      newArray.push(number);
+    }
+  });
+  return newArray;
 }
+
+// ================= 10 ================!!!!!!!
+
+const planets = ['Земля', 'Марс', 'Венера', 'Юпитер'];
+// Пиши код ниже этой строки
+const planetsLengths = planets.map(planet => planet.length);
+
+// ================= 11 ================
+
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 },
+];
+// Пиши код ниже этой строки
+
+const titles = books.map(book => book.title);
+
+// ================= 12 ================
+
+const books = [
+  {
+    title: 'Последнее королевство',
+    author: 'Бернард Корнуэлл',
+    genres: ['приключения', 'историческое'],
+  },
+  {
+    title: 'На берегу спокойных вод',
+    author: 'Роберт Шекли',
+    genres: ['фантастика'],
+  },
+  {
+    title: 'Красна как кровь',
+    author: 'Ли Танит',
+    genres: ['ужасы', 'мистика'],
+  },
+];
+// Пиши код ниже этой строки
+
+const genres = books.flatMap(book => book.genres);
+
+// ================= 13 ================
+
+// Пиши код ниже этой строки
+const getUserNames = users => {
+  return users.map(user => user.name);
+};
+// console.log(getUserNames);добавить аргумент( не понял )
 // Пиши код выше этой строки
+
+// ================= 14 ================
+
+// Пиши код ниже этой строки
+const getUserEmails = users => {
+  return users.map(user => user.email);
+};
+
+// ================= 15 ================
+
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// Пиши код ниже этой строки
+
+const evenNumbers = numbers.filter(number => {
+  return number % 2 === 0;
+});
+const oddNumbers = numbers.filter(number => {
+  return number % 2 !== 0;
+});
+
+console.log(evenNumbers);
+console.log(oddNumbers);
+
+// ================= 16 ================
