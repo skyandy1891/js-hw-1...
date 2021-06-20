@@ -476,3 +476,72 @@ const sortedByDescentingRating = [...books].sort(
 );
 
 // ================= 38 ================
+
+// Пиши код ниже этой строки
+const sortByAscendingBalance = users => {
+  return (users = users.sort((a, b) => a.balance - b.balance));
+};
+
+// ================= 39 ================
+
+// Пиши код ниже этой строки
+const sortByDescendingFriendCount = users => {
+  return (users = [...users].sort(
+    (a, b) => b.friends.length - a.friends.length,
+  ));
+};
+
+// ================= 40 ================
+
+// Пиши код ниже этой строки
+const sortByName = users => {
+  return [...users].sort((a, b) => a.name.localeCompare(b.name));
+};
+// Пиши код выше этой строки
+
+// ================= 41 ================!!!
+
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+  { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 },
+];
+const MIN_BOOK_RATING = 8;
+// Пиши код ниже этой строки
+
+const names = [...books]
+  .filter(book => book.rating > MIN_BOOK_RATING)
+  .map(book => book.author)
+  .sort((a, b) => a.localeCompare(b));
+
+// ================= 42 ================!!!
+
+// Пиши код ниже этой строки
+const getNamesSortedByFriendCount = users => {
+  return [...users]
+    .sort((a, b) => a.friends.length - b.friends.length)
+    .filter((user, index, array) => array.indexOf(user) === index)
+    .map(user => user.name);
+};
+
+// ================= 43 ================!!!
+
+const getSortedFriends = users => {
+  return users
+    .flatMap(user => user.friends)
+    .filter((uniqueName, ind, arr) => arr.indexOf(uniqueName) === ind)
+    .sort((firstName, secondName) => firstName.localeCompare(secondName));
+};
+
+// ================= 44 ================!!!
+
+const getTotalBalanceByGender = (users, gender) => {
+  return [...users]
+    .filter(user => user.gender === gender)
+    .map(user => user.balance)
+    .reduce((previousValue, value) => (previousValue += value), 0);
+};
+
+//  ===================================== DONE =====================================
