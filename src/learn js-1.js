@@ -3,19 +3,19 @@
 const shouldRenew = confirm('хочешь открыть эту страницу ?');
 console.log(shouldRenew);
 
-// const shouldNew = confirm('точно???');
-// console.log(shouldRenew);
+const shouldNew = confirm('точно???');
+console.log(shouldRenew);
 
-// let quantity = prompt('Тогда скинь немного деньжат ))');
-// quantity = Number(quantity);
-// console.log(quantity);
-// // console.log(typeof quantity);
+let quantity = prompt('Тогда скинь немного деньжат ))');
+quantity = Number(quantity);
+console.log(quantity);
+// console.log(typeof quantity);
 
-// const renew = confirm('Отлично! Теперь ты можешь прочитать текст заявления!');
-// console.log(shouldRenew);
+const renew = confirm('Отлично! Теперь ты можешь прочитать текст заявления!');
+console.log(shouldRenew);
 
-// let congrats = prompt('Как тебе мои первые "шаги?"');
-// console.log(congrats);
+let congrats = prompt('Как тебе мои первые "шаги?"');
+console.log(congrats);
 
 // ==================parseInt/parseFloat==================
 
