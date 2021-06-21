@@ -1,19 +1,25 @@
-const shouldRenew = confirm('продлить подписку?');
+// ==================PROMPT/CONFIRM==================
+
+const shouldRenew = confirm('хочешь открыть эту страницу ?');
 console.log(shouldRenew);
 
-const shouldNew = confirm('вы согласны отдать нам все ваши деньги?');
+const shouldNew = confirm('точно???');
 console.log(shouldRenew);
 
-const sure = confirm('точно хотите?');
-console.log(shouldRenew);
-
-let quantity = prompt('введите номер карты');
+let quantity = prompt('Тогда скинь немного деньжат ))');
 quantity = Number(quantity);
 console.log(quantity);
 // console.log(typeof quantity);
 
-const renew = confirm('спасибо,вы лошара!');
+const renew = confirm('Отлично! Теперь ты можешь прочитать текст заявления!');
 console.log(shouldRenew);
 
-let Feedback = prompt('оставьте пожалуйста отзыв о нашей компании)))');
-console.log(Feedback);
+let congrats = prompt('Как тебе мои первые "шаги?"');
+console.log(congrats);
+
+// ==================parseInt/parseFloat==================
+
+let elementWidth = '50px';
+elementWidth = Number.parseInt(elementWidth);
+console.log('elementWidth', elementWidth);
+//  (parseInt выводит в консоль только целые чила. упирается в первый символ "не число" и останавливает операцию)
