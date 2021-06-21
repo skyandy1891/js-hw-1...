@@ -71,7 +71,7 @@ console.log(shouldRenew);
 // console.log(result);
 
 // меняем рандомный цвет фона страницы
-const colors = ['tomato', 'mango', 'green', 'yellow', 'blue', 'teal'];
+const colors = ['tomato', 'mango', 'green', 'yellow', 'lime', 'blue', 'teal'];
 const max = colors.length - 1;
 const min = 0;
 const index = Math.round(Math.random() * (max - min) + min);
