@@ -1,28 +1,30 @@
-function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
-    let message;
+// напиши скрипт выбора опции доставки товара.
 
-    const totalPrice = pricePerDroid * orderedQuantity;
-    if (totalPrice > customerCredits) {
-        message = `Insufficient funds!`;
-    } else {
-        message = `You ordered ${orderedQuantity} droids, you have ${(customerCredits -=
-            totalPrice)} credits left`;
-    }
-    return message;
-}
-// ==================================================================
-function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
-    let message;
-    // Change code below this line
-    const totalPrice = pricePerDroid * orderedQuantity;
+// опция хранится в переменной option.
 
-    if (totalPrice > customerCredits) {
-        message = `Isufficient funds!`;
-    } else {
-        message = `You ordered ${pricePerDroid} droids, you have ${(customerCredits -=
-            totalPrice)} credits left`;
+// 1 - самовывоз, 2 - курьер, 3 - почта.
 
-        // Change code above this line
-        return message;
-    }
-}
+//  - 'вы можете забрать товар завтра с 12:00 в нашем офисе'
+
+//  - 'курьер доставит заказ завтра с 9:00 до 18:00'
+
+//  - 'посылка будет отправлена сегодня'
+
+//  - 'вам перезвонит менеджер'
+
+// const option = 1;
+// let message;
+// switch (option) {
+//     case 1:
+//         message = 'вы можете забрать товар завтра с 12:00 в нашем офисе';
+//         break;
+//     case 2:
+//         message = 'курьер доставит заказ завтра с 9:00 до 18:00';
+//         break;
+//     case 3:
+//         message = 'посылка будет отправлена сегодня';
+//         break;
+//     default:
+//         message = 'вам перезвонит менеджер';
+// }
+// console.log(option);
